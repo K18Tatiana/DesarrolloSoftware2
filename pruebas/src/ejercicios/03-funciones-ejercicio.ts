@@ -10,7 +10,7 @@ interface UsuarioInterface {
         ciudad: string;
         pais: string;
     };
-    saludar: () => void;
+    saludar: () => string;
     actualizarEmail: (nuevoEmail: string) => void;
 }
 const usuario1: UsuarioInterface = {
@@ -24,7 +24,7 @@ const usuario1: UsuarioInterface = {
         pais: 'Colombia'
     },
     saludar () {
-        console.log(`Hola, mi nombre es ${this.nombre}`);
+        return `Hola, mi nombre es ${this.nombre}`;
     },
     actualizarEmail(nuevoEmail: string) {
         this.email = nuevoEmail;
