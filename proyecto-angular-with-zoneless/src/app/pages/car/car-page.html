@@ -1,0 +1,11 @@
+<div class="container text-center mt-5">
+  <h1 class="text-primary">Componente Car</h1>
+  <h2>Marca: {{ brand() }}</h2>
+  <h2>Año: {{ year() }}</h2>
+  <h2>Estudiante: {{ capitalizeStudent() }}</h2>
+  <h2>Estudiante: {{ student() | uppercase }}</h2>
+  <p>Descripción: {{ getCarDescription() }}</p>
+  <button class="btn btn-primary mx-2" (click)="changeCar()">Cambiar Car</button>
+  <button class="btn btn-primary mx-2" (click)="changeYear()">Cambiar Año</button>
+  <button class="btn btn-secondary mx-2" (click)="resetForm()">Resetear</button>
+</div>
