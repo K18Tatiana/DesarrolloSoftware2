@@ -1,9 +1,16 @@
 <div class="container text-center mt-5">
+<<<<<<< HEAD
   <h1 class="text-primary">Componente Car</h1>
   <h2>Marca: {{ brand() }}</h2>
   <h2>Año: {{ year() }}</h2>
   <h2>Estudiante: {{ capitalizeStudent() }}</h2>
   <h2>Estudiante: {{ student() | uppercase }}</h2>
+=======
+  <h1>Componente Car</h1>
+  <h2>Marca: {{ brand() }}</h2>
+  <h2>Año: {{ year() }}</h2>
+  <h2>Estudiante: {{ student().toUpperCase() }}</h2>
+>>>>>>> d7d3bad9a9b8acfafa12011e5f36a9f0db3015c4
   <p>Descripción: {{ getCarDescription() }}</p>
   <button class="btn btn-primary mx-2" (click)="changeCar()">Cambiar Car</button>
   <button class="btn btn-primary mx-2" (click)="changeYear()">Cambiar Año</button>
