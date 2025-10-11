@@ -1,0 +1,27 @@
+@if (searchTerm()) {
+  <div class="mb-4">
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">
+      Resultados para: "{{ searchTerm() }}"
+    </h2>
+    @if (searchGifs().length > 0) {
+      <gif-list [gifs]="searchGifs()" />
+    } @else {
+      <div class="text-center py-12">
+        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.709M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        <p class="text-gray-500 text-lg">No se encontraron gifs para "{{ searchTerm() }}"</p>
+        <p class="text-gray-400">Intenta con otro término de búsqueda</p>
+      </div>
+    }
+  </div>
+} @else {
+  <div class="text-center py-12">
+    <svg class="w-20 h-20 text-blue-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    </svg>
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Busca tus gifs favoritos</h2>
+    <p class="text-gray-600 text-lg mb-2">Escribe en el campo de búsqueda para encontrar gifs increíbles</p>
+    <p class="text-gray-500">Los resultados aparecerán mientras escribes</p>
+  </div>
+}

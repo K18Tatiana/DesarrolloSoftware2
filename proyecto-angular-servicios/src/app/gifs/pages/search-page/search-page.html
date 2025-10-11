@@ -1,1 +1,12 @@
-<p>search-page works!</p>
+<section class="py-5">
+  <div class="mx-auto px-4">
+    <!-- Search Input Component -->
+    <search-input (searchTerm)="onSearch($event)" />
+
+    <!-- Search Results Component -->
+    <search-results
+      [searchTerm]="gifService.searchTerm()"
+      [searchGifs]="gifService.searchGifs()"
+    />
+  </div>
+</section>
